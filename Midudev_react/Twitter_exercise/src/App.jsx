@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   return (
-    <article>
+    <article className="tw-followCard">
       <header>
         <img alt="El avatar de midu" src="https://unavatar.io/midudev" />
         <div>
