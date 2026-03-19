@@ -3,18 +3,15 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
+import { TwitterFollowCard } from "./TwitterFollowCard";
 
 function App() {
   return (
-    <article className="tw-followCard">
-      <header>
-        <img alt="El avatar de midu" src="https://unavatar.io/midudev" />
-        <div>
-          <strong>Miguel Ángel Durán</strong>
-          <span>@midudev</span>
-        </div>
-      </header>
-    </article>
+    <>
+      <TwitterFollowCard userName="midudev" name="Miguel Ángel Durán" />
+      <TwitterFollowCard userName="sydneys_sweeney" name="Sydney Sweeney" />
+      <TwitterFollowCard userName="F1" name="Formula 1 Racing" />
+    </>
   );
 }
 
