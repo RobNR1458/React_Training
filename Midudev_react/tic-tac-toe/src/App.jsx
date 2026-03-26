@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import confetti from "canvas-confetti";
+//TODO: Refactorizar el código componetizándolo
 
 const TURNS = {
   x: "x",
