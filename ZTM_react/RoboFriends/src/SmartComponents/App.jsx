@@ -1,7 +1,7 @@
-import CardList from "./CardList.jsx";
-import SearchBox from "./SearchBox.jsx";
+import CardList from "../Components/CardList.jsx";
+import SearchBox from "../Components/SearchBox.jsx";
 import { useEffect, useState } from "react";
-import Scroll from "./Scroll.jsx";
+import Scroll from "../Components/Scroll.jsx";
 import "./App.css";
 
 export default function App() {
