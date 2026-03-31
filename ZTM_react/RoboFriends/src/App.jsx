@@ -1,11 +1,20 @@
 import CardList from "./CardList.jsx";
 import SearchBox from "./SearchBox.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Scroll from "./Scroll.jsx";
 import "./App.css";
 
 export default function App() {
   const [searchField, setSearchField] = useState("");
   const [robots, setRobots] = useState([]); //Ahora robots no estará hardcodeado, se hará una api call
+
+  //Con useEffect se hace la api call para obtener los robots, y se actualiza el estado de robots con la respuesta de la api.
+  // Se usa useEffect, ya que es un efecto secundario, y no queremos que se ejecute cada vez que se renderiza el componente, sino solo la primera vez que se monta el componente, por eso se le pasa un array vacío como segundo argumento.
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((users) => setRobots(users));
+  }, []);
 
   //Esta función se encarga de manejar el cambio de estado cada que el usuario teclea algo nuevo en el input box
   const handleInputChange = (currentInputText) => {
@@ -23,7 +32,9 @@ export default function App() {
         inputText={searchField}
         OnInputTextChange={handleInputChange}
       />
-      <CardList robots={filteredRobots} />
+      <Scroll>
+        <CardList robots={filteredRobots} />
+      </Scroll>
     </div>
   );
 }
