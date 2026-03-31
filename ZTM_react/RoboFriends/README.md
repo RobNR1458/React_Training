@@ -1,16 +1,28 @@
-# React + Vite
+# RoboFriends - Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+RoboFriends is a React-based web application that displays a list of robots fetched from a public API. It allows users to filter robots by name using a search bar. The project uses Vite as the build tool and Tachyons for its styling.
 
-Currently, two official plugins are available:
+## Main Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19**: Frontend library for building the user interface.
+- **Vite 8**: Next-generation frontend build tool for fast development and building.
+- **Tachyons**: Functional CSS framework for rapid and responsive styling.
+- **JSONPlaceholder**: Used as a mock REST API to fetch user (robot) data.
 
-## React Compiler
+## Building and Running
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Ensure you have [Node.js](https://nodejs.org/) installed before running the following commands:
 
-## Expanding the ESLint configuration
+### Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+### Development
+
+Start the development server with Hot Module Replacement (HMR):
+
+```bash
+npm run dev
+```
