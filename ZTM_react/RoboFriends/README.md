@@ -2,6 +2,9 @@
 
 RoboFriends is a React-based web application that displays a list of robots fetched from a public API. It allows users to filter robots by name using a search bar. The project uses Vite as the build tool and Tachyons for its styling.
 
+# Web demo
+https://robnr1458.github.io/React_Training/ 
+
 ## Main Technologies
 
 - **React 19**: Frontend library for building the user interface.
